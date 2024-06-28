@@ -38,14 +38,14 @@ export default function Home() {
                 className="uppercase flex items-center gap-2"
               >
                 <a
-                  href="/assets/resume/rsme.pdf"
+                  href="/assets/resume/Debasish.pdf"
                   download="Debasish"
                   className="no-underline font-bold text-xl"
                 >
                   Resume
                 </a>
                 <a
-                  href="/assets/resume/rsme.pdf"
+                  href="/assets/resume/Debasish.pdf"
                   download="Debasish"
                   className="no-underline font-bold text-xl"
                 >
