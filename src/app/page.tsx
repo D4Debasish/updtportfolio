@@ -20,7 +20,7 @@ export default function Home() {
       <div className="conatiner mx-auto h-full">
         <div className="flex flex-col gap-14 xl:gap-1 xl:flex-row items-center justify-around  ">
           <div className="text-lg max-w-lg flex flex-col text-center xl:text-left order-2 xl:order-none ">
-            <h1 className="text-3xl">Hey, Im</h1>
+            <h1 className="text-3xl">Hi, Myself</h1>
             <h1 className="text-[40px]  text-accent">
               <span className=" inline-block w-auto whitespace-nowrap overflow-hidden ">
                 {text}{" "}
