@@ -46,7 +46,18 @@ export async function POST(request: NextRequest) {
       text: `Name: ${firstname} ${lastname}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`,
     };
 
-    await transporter.sendMail(mailOptions);
+    const sendMailPromise = () =>
+      new Promise<void>((resolve, reject) => {
+        transporter.sendMail(mailOptions, (error, info: any) => {
+          if (error) {
+            reject(error);
+          } else {
+            resolve(info);
+          }
+        });
+      });
+
+    await sendMailPromise();
     return NextResponse.json({ message: "Message sent successfully!" });
   } catch (error: any) {
     console.error("Error sending email:", error);
