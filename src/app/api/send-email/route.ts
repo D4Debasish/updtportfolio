@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
 
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      port: 465,
+      port: 587,
       secure: true,
       logger: true,
       debug: true,

@@ -41,11 +41,11 @@ const about = {
     },
     {
       fieldName: "Sports",
-      fieldValue: "Table_Tenis, Air_Hockey",
+      fieldValue: "Table_Tenis, Football",
     },
     {
       fieldName: "Video_Game",
-      fieldValue: "Valorant, FIFA, Chess",
+      fieldValue: "Valorant, FIFA",
     },
     {
       fieldName: "Nationality",
@@ -213,7 +213,7 @@ const About = () => {
                       return (
                         <li
                           key={key}
-                          className="  bg-gray-900 h-[180px] xl:h-[180px] py-6 rounded-[25px]  flex  flex-col justify-start px-10 items-center xl:items-start"
+                          className="  bg-gray-800 h-[180px] xl:h-[180px] py-6 rounded-[25px]  flex  flex-col justify-start px-10 items-center xl:items-start"
                         >
                           <span className="text-accent text-sm xl:text-sm mb-2">
                             {item.times}
@@ -245,7 +245,7 @@ const About = () => {
                     {education.items.map((item, key) => (
                       <li
                         key={key}
-                        className="bg-gray-900 py-4 xl:py-6 rounded-[25px] flex flex-col justify-start px-6 xl:px-10 items-center xl:items-start"
+                        className="bg-gray-800 py-4 xl:py-6 rounded-[25px] flex flex-col justify-start px-6 xl:px-10 items-center xl:items-start"
                         style={{ minHeight: "180px", maxHeight: "230px" }} // Adjust min-height and max-height for smaller devices
                       >
                         <span className="text-accent text-sm xl:text-sm mb-2">
@@ -313,7 +313,7 @@ const About = () => {
                 <p className="text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 px-3 pt-6 gap-y-6 xl:gap-y-10 xl:grid-cols-2 max-w-[720px] mx-auto xl:mx-0  mt-6 xl:mt-0 bg-gray-900 rounded-xl">
+                <ul className="grid grid-cols-1 px-3 pt-6 gap-y-6 xl:gap-y-10 xl:grid-cols-2 max-w-[720px] mx-auto xl:mx-0  mt-6 xl:mt-0 bg-gray-800 rounded-xl">
                   {about.info.map((item, key) => {
                     return (
                       <li
