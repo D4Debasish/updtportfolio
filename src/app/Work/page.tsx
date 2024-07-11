@@ -37,6 +37,17 @@ const projects = [
   {
     num: "02",
     category: "Frontend",
+    title: "itract_app",
+    description:
+      "A static frontend web application created to implement my understanding for styling of components",
+    stack: [{ name: "NEXT" }, { name: "Tailwind" }, { name: "Shadcn/ui" }],
+    image: "/assets/work/itrr.png",
+    live: "https://itractio.vercel.app/",
+    github: "https://github.com/D4Debasish/itractio",
+  },
+  {
+    num: "03",
+    category: "Frontend",
     title: "SkillSim",
     description:
       "A frontend web application made after completing the design in Figma",
@@ -50,7 +61,7 @@ const projects = [
     github: "https://github.com/D4Debasish/skillsimNew",
   },
   {
-    num: "03",
+    num: "04",
     category: "Fullstack",
     title: "Deploy_IT",
     description:
@@ -67,7 +78,7 @@ const projects = [
     github: "https://github.com/D4Debasish/Deployit",
   },
   {
-    num: "04",
+    num: "05",
     category: "Frontend",
     title: "Disease_Tracker",
     description:
@@ -83,7 +94,7 @@ const projects = [
     github: "https://github.com/D4Debasish/Ctrack",
   },
   {
-    num: "05",
+    num: "06",
     category: "Fullstack",
     title: "Day_Task",
     description:
@@ -100,7 +111,7 @@ const projects = [
       "https://github.com/D4Debasish/DayTask--React-Node-PostgreSQL-Express-Shadcn-ui",
   },
   {
-    num: "06",
+    num: "07",
     category: "Frontend",
     title: "Movie_APP",
     description:
@@ -111,7 +122,7 @@ const projects = [
     github: "https://github.com/D4Debasish/Movie-App-VanillaJS-",
   },
   {
-    num: "07",
+    num: "08",
     category: "Backend",
     title: "VideoStream",
     description:
@@ -202,13 +213,13 @@ const Work = () => {
             <Swiper
               spaceBetween={30}
               slidesPerView={1}
-              className="xl:h-[520px] mb-12"
+              className="xl:h-[490px] mb-12"
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className=" h-[400px] relative group flex justify-center items-center bg-purple-50/20">
+                    <div className=" h-[400px] relative group flex justify-center items-center bg-transparent ">
                       {/*  overlay...*/}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/*  image...*/}
@@ -216,9 +227,8 @@ const Work = () => {
                         <Image
                           src={project.image}
                           alt={project.title}
-                          className=" object-cover"
+                          className=" xl:object-contain object-cover "
                           fill
-                          style={{ objectFit: "cover" }}
                         />
                       </div>
                     </div>

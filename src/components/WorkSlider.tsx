@@ -11,18 +11,18 @@ const WorkSlider = () => {
               xl:w-max xl:justify-none"
     >
       <button
-        className="bg-accent hover:bg-accent-hover text-primary text=[22px] w-[54px] h-[54px] flex justify-center rounded-full 
+        className="bg-white/80 opacity-60 hover:bg-white/50 text-yellow-500 font-bold text=[22px] w-[54px] h-[54px] flex justify-center rounded-full 
               items-center transition-all"
         onClick={() => swiper.slidePrev()}
       >
-        <PiCaretLeftBold className="text-black font-bold" />
+        <PiCaretLeftBold className="text-black font-extrabold" />
       </button>
       <button
-        className="bg-accent hover:bg-accent-hover text-primary text=[22px] w-[54px] h-[54px] flex justify-center rounded-full
+        className="bg-white/80 opacity-60 hover:bg-white/50 text-yellow-500 font-bold text=[22px] w-[54px] h-[54px] flex justify-center rounded-full
               items-center transition-all"
         onClick={() => swiper.slideNext()}
       >
-        <PiCaretRightBold className="text-black font-bold" />
+        <PiCaretRightBold className="text-black font-extrabold" />
       </button>
     </div>
   );

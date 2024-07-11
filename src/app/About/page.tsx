@@ -41,7 +41,7 @@ const about = {
     },
     {
       fieldName: "Sports",
-      fieldValue: "Table_Tenis, Football",
+      fieldValue: "Table_Tenis, Chess",
     },
     {
       fieldName: "Video_Game",
@@ -52,7 +52,7 @@ const about = {
       fieldValue: "Indian",
     },
     {
-      fieldName: "Languages",
+      fieldName: "Lang",
       fieldValue: "English, Hindi, Bengali",
     },
   ],
@@ -69,11 +69,13 @@ const experience = {
       comapny: "TrueCircle.in",
       position: "Front-end developer intern",
       times: "06/2023-09/2023",
+      role: "Worked as a Frontend Intern handling API networks and managing state using Redux ",
     },
     {
       comapny: "Doordarshan,Guwahati",
       position: "System Engineer intern",
       times: "08/2022-09/2022",
+      role: "Worked as System Engineer Intern mainly undernstanding satellite and the communication between them. ",
     },
   ],
 };
@@ -207,23 +209,28 @@ const About = () => {
                 <p className=" text-white/60 mx-auto xl:mx-0">
                   {experience.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[400px] xl:w-[800px] ">
                   <ul className="flex flex-col gap-4 xl:gap-12">
                     {experience.items.map((item, key) => {
                       return (
                         <li
                           key={key}
-                          className="  bg-gray-800 h-[180px] xl:h-[180px] py-6 rounded-[25px]  flex  flex-col justify-start px-10 items-center xl:items-start"
+                          className="  bg-gray-800 h-[280px]  xl:h-[250px] py-6 rounded-[25px]  flex  flex-col justify-start px-10 items-center xl:items-start"
                         >
                           <span className="text-accent text-sm xl:text-sm mb-2">
                             {item.times}
                           </span>
-                          <h3 className="text-xl xl:sm font-bold max-w-[350px] min-h-[60px] text-center xl:text-left ">
+                          <h3 className="text-sm xl:text-xl font-bold max-w-[390px] min-h-[60px] text-center xl:text-left mt-3 ">
                             {item.position}
                           </h3>
                           <div className=" flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
-                            <p className="text-white/60">{item.comapny}</p>
+                            <span className="xl:w-[6px] xl:h-[6px] xl:rounded-full xl:bg-white xl:mt-5 hidden xl:flex "></span>
+                            <p className="text-white/80 text-[16px] xl:text-[18px]">
+                              {item.comapny}
+                              <p className="text-white/60 text-[13px] xl:text-[16px] mt-4">
+                                {item.role}
+                              </p>
+                            </p>
                           </div>
                         </li>
                       );
@@ -236,32 +243,35 @@ const About = () => {
             {/* education...................................................*/}
             <TabsContent value="education" className="w-full xl:mx-[30px]">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{education.title}</h3>
-                <p className=" text-white/60 mx-auto xl:mx-0">
+                <h3 className="xl:text-4xl text-xl font-bold">
+                  {education.title}
+                </h3>
+                <p className=" text-white/60 mx-auto xl:mx-0 xl:text-md text-sm">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[400px] xl:w-[750px] ">
                   <ul className="flex flex-col gap-4 xl:gap-8">
                     {education.items.map((item, key) => (
                       <li
                         key={key}
-                        className="bg-gray-800 py-4 xl:py-6 rounded-[25px] flex flex-col justify-start px-6 xl:px-10 items-center xl:items-start"
-                        style={{ minHeight: "180px", maxHeight: "230px" }} // Adjust min-height and max-height for smaller devices
+                        className="bg-gray-800 py-4 xl:py-6 rounded-[25px] flex flex-col justify-start px-6 xl:px-10 items-center xl:items-start min-h-[180px] xl:max-h-[230px] max-h-[290px]"
                       >
                         <span className="text-accent text-sm xl:text-sm mb-2">
                           {item.times}
                         </span>
-                        <h3 className="text-xl xl:sm font-bold max-w-[350px] min-h-[60px] text-center xl:text-left">
+                        <h3 className="text-md xl:text-xl font-bold max-w-[590px] min-h-[60px] text-center xl:text-left">
                           {item.institute}
                         </h3>
                         <div className="flex flex-col gap-2">
-                          <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
-                            <p className="text-white/60">{item.course}</p>
+                          <div className="flex xl:items-center gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-white xl:mt-0 mt-5"></span>
+                            <p className="text-white/60 xl:text-xl text-sm xl:mt-0 mt-3 ">
+                              {item.course}
+                            </p>
                           </div>
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-white"></span>
-                            <p className="text-white/60">
+                            <span className="w-[6px] h-[6px] rounded-full bg-white xl:mt-0 mt-2"></span>
+                            <p className="text-white/60 xl:text-[17px] text-sm xl:mt-0 mt-2">
                               {item.subject} | {item.grade}
                             </p>
                           </div>
